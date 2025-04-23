@@ -4,12 +4,12 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 # Load models and vectorizers with correct paths
-sentiment_model = joblib.load("C:/Users/91920/Downloads/sentiment_model.pkl")
+sentiment_model = joblib.load("sentiment_model.pkl")
 
-sentiment_vectorizer = joblib.load("C:/Users/91920/Downloads/sentiment_vectorizer.pkl")
+sentiment_vectorizer = joblib.load("sentiment_vectorizer.pkl")
 
-sarcasm_model = joblib.load("C:/Users/91920/Downloads/sarcasm_model.pkl")
-sarcasm_vectorizer = joblib.load("C:/Users/91920/Downloads/sarcasm_vectorizer.pkl")  # <-- fixed the missing )
+sarcasm_model = joblib.load("sarcasm_model.pkl")
+sarcasm_vectorizer = joblib.load("sarcasm_vectorizer.pkl")  # <-- fixed the missing )
 
 @app.route("/")
 def home():
